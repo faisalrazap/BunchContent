@@ -11,7 +11,6 @@
 
     <div class="panel-body padd-top-30">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
         <div class="input-group margin-bottom-25">
           <span class="input-group-addon"><i class="fa fa-user"></i></span>
           <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
