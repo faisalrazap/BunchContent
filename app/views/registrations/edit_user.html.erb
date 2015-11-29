@@ -1,0 +1,6 @@
+<legend>Editing user</legend>
+<div class='user-container'>
+  <%= form_for @user, url: update_user_path(@user), html: { class: 'form-horizontal', method: :put }  do |f| %>
+    <%= render partial: 'form', locals: { f: f } %>
+  <% end %>
+</div>

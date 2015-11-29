@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: :registrations }
+  devise_scope :user do
+    get :users, to: 'registrations#user_list'
+    get :new_user, to: 'registrations#new_user'
+    post :create_user, to: 'registrations#create_user'
+    put 'update_user/:id', to: 'registrations#update_user', as: :update_user
+    get 'user/:id/edit', to: 'registrations#edit_user', as: :edit_user
+    delete 'destroy_user/:id', to: 'registrations#destroy_user', as: :destroy_user
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

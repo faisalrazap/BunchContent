@@ -31,3 +31,12 @@
 .messages {
   margin-top: 20px;
 }
+.user-container {
+  margin-top: 60px;
+}
+.user-container .form-group {
+  margin-top: 20px;
+}
+.new-user-btn {
+  padding: 20px 0px;
+}
