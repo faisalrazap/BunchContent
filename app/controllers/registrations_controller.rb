@@ -1,11 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  def new
-    redirect_to new_user_session_path, alert: 'You are not allowed to sign up'
-  end
+  before_action :restrict_sign_up, only: [:new, :edit]
 
-  def create
-    redirect_to new_user_session_path, alert: 'You are not allowed to sign up'
-  end
+  private
+    def restrict_sign_up
+      redirect_to new_user_session_path, alert: 'You are not allowed to sign up'
+    end
 
 end
