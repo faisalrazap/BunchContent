@@ -1,0 +1,30 @@
+.login-container {
+  margin-top: 50px;
+}
+.login-form {
+  padding-top: 30px
+}
+.login-form .field {
+  margin-bottom: 25px;
+}
+.login-btn {
+  margin-top: 10px;
+}
+.reset-password-container {
+  margin-top: 50px;
+}
+.reset-password-form {
+  padding-top: 30px
+}
+.reset-password-form .field {
+  margin-bottom: 25px;
+}
+.forget-password {
+  float: right;
+  font-size: 80%;
+  position: relative;
+  top: -10px;
+}
+.reset-password-btn {
+  margin-top: 10px;
+}
