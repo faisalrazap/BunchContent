@@ -1,2 +1,1 @@
-puts 'Creating User'
-User.create(email: "admin@contentbunch.com", password: "password")
+load(Rails.root.join( 'db', 'seeds', "#{Rails.env.downcase}.rb"))
