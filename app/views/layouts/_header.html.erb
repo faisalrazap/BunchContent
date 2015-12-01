@@ -1,6 +1,30 @@
-<% if current_user.present? %>
-  <span><%= link_to 'Edit Profile', edit_user_registration_path %></span>
-  <span><%= link_to 'Logout', destroy_user_session_path, method: :delete %></span>
-<% else %>
-  <span><%= link_to 'Login', new_user_session_path %></span>
-<% end %>
+<nav class='navbar navbar-default' role='navigation'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+        <div class='navbar-header'>
+          <%= link_to image_tag('logo.png'), root_path, class: 'navbar-brand brand logo' %>
+        </div>
+
+        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+          <% if current_user.present? %>
+            <ul class='nav navbar-nav navbar-right'>
+              <li class='dropdown help-menu'>
+                <%= link_to 'Help', '#', target: '_blank' %>
+              </li>
+
+              <%= render 'application/menu_tools' %>
+              <%= render 'application/menu_user_management' %>
+            </ul>
+          <% else %>
+            <ul class='nav navbar-nav navbar-right'>
+              <li class='dropdown help-menu'>
+                <%= link_to 'Login', new_user_session_path %>
+              </li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
