@@ -1,0 +1,6 @@
+<legend>Create new user</legend>
+<div class='user-container'>
+  <%= form_for @user, url: create_users_path, html: { class: 'form-horizontal user-form' }  do |f| %>
+    <%= render partial: 'form', locals: { f: f, action_btn_text: 'Create Account' } %>
+  <% end %>
+</div>
