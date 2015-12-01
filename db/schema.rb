@@ -33,7 +33,10 @@ ActiveRecord::Schema.define(version: 20151129114826) do
     t.string   "role",                   limit: 30
   end
 
+  add_index "users", ["active"], name: "index_users_on_active", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["locked"], name: "index_users_on_locked", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["role"], name: "index_users_on_role", using: :btree
 
 end
