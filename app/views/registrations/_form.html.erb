@@ -23,21 +23,21 @@
 <div class='form-group'>
   <%= f.label :email, class: 'col-md-3 control-label' %>
   <div class='col-md-6'>
-    <%= f.text_field :email, placeholder: 'Email', class: 'form-control' %>
+    <%= f.email_field :email, placeholder: 'Email', required: true, class: 'form-control' %>
   </div>
 </div>
 
 <div class='form-group'>
   <%= f.label :password, class: 'col-md-3 control-label' %>
   <div class='col-md-6'>
-    <%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
+    <%= f.password_field :password, placeholder: 'Password', required: true, class: 'form-control' %>
   </div>
 </div>
 
 <div class='form-group'>
   <%= f.label :password_confirmation, class: 'col-md-3 control-label' %>
   <div class='col-md-6'>
-    <%= f.password_field :password_confirmation, placeholder: 'Password confirmation', class: 'form-control' %>
+    <%= f.password_field :password_confirmation, placeholder: 'Password confirmation', required: true, class: 'form-control' %>
   </div>
 </div>
 
