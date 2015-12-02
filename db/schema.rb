@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129114826) do
+ActiveRecord::Schema.define(version: 20151202200539) do
+
+  create_table "static_tools", force: :cascade do |t|
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "page_key",   limit: 30
+  end
+
+  add_index "static_tools", ["page_key"], name: "index_static_tools_on_page_key", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",    null: false
