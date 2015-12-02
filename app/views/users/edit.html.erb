@@ -1,0 +1,6 @@
+<legend>Editing user</legend>
+<div class='user-container'>
+  <%= form_for @user, html: { class: 'form-horizontal user-form', id: 'user-edit', method: :put }  do |f| %>
+    <%= render partial: 'form', locals: { f: f, action_btn_text: 'Update Account' } %>
+  <% end %>
+</div>
