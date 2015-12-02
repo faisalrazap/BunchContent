@@ -1,0 +1,38 @@
+<div class='row pull-right new-user-btn'>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <%= link_to 'Create New User', new_user_path, class: 'btn btn-success' %>
+  </div>
+</div>
+<table class='table table-bordered table-hover table-striped'>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Active</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.role %></td>
+        <td><%= user.active %></td>
+        <td>
+          <div class='row text-center'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+              <%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe, edit_user_path(user) %>
+            </div>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+              <%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

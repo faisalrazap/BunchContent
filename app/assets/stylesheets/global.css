@@ -31,6 +31,23 @@
 .messages {
   margin-top: 20px;
 }
+.user-container {
+  margin-top: 60px;
+}
+.user-container .form-group {
+  margin-top: 20px;
+}
+.new-user-btn {
+  padding: 20px 0px;
+}
+.user-form span.error{
+  color: red;
+  font-weight: normal;
+}
+.user-form input.error,
+.user-form select.error {
+  border: 1px solid red;
+}
 .navbar .brand {
   padding: 0;
   font-size: 22px;
