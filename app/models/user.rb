@@ -6,6 +6,12 @@ class User < ActiveRecord::Base
 
   validates_presence_of :role
 
-  role = Struct.new(:display_name, :value_name)
-  ROLES = [role.new('Super Admin', 'superadmin'), role.new('Super Group Admin', 'supergroupadmin'), role.new('Group Admin', 'groupadmin'), role.new('Admin', 'admin')]
+  Role = Struct.new(:display_name, :value_name)
+
+  ROLES = [
+            Role.new('Super Admin', 'super_admin'),
+            Role.new('Super Group Admin', 'super_group_admin'),
+            Role.new('Group Admin', 'group_admin'),
+            Role.new('Admin', 'admin'),
+          ]
 end
