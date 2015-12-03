@@ -7,11 +7,14 @@ class User < ActiveRecord::Base
   validates_presence_of :role
 
   Role = Struct.new(:display_name, :value_name)
+  ROLES = {
+    'super_admin'       => ['super_admin', 'super_group_admin', 'group_admin', 'admin'],
+    'super_group_admin' => ['super_group_admin', 'group_admin', 'admin'],
+    'group_admin'       => ['group_admin', 'admin'],
+    'admin'             => ['admin'],
+  }
 
-  ROLES = [
-            Role.new('Super Admin', 'super_admin'),
-            Role.new('Super Group Admin', 'super_group_admin'),
-            Role.new('Group Admin', 'group_admin'),
-            Role.new('Admin', 'admin'),
-          ]
+  def available_roles
+    ROLES[self.role].map { |role| Role.new(role.titleize, role) }
+  end
 end
