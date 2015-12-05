@@ -24,3 +24,31 @@ $(document).ready ->
     }
     submitHandler: (form) ->
       form.submit()
+
+  if $('#modal').length > 0
+    modal = do ->
+      method = {}
+      $overlay = $('#overlay')
+      $modal = $('#modal')
+      $content = $('#content')
+      $modal.hide()
+      $overlay.hide()
+      $modal.prependTo 'body'
+      $overlay.prependTo 'body'
+
+      method.center = ->
+        top = Math.max($(window).height() - $modal.outerHeight(), 0) / 2
+        left = Math.max($(window).width() - $modal.outerWidth(), 0) / 2
+        $modal.css
+          top: top + $(window).scrollTop()
+          left: left + $(window).scrollLeft()
+
+      method.open = (settings) ->
+        method.center()
+        $(window).bind 'resize.modal', method.center
+        $modal.show()
+        $overlay.show()
+
+      method
+
+    modal.open()

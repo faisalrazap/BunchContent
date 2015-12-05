@@ -4,4 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :authenticate_user!
+  before_action :locked_account
+
+  private
+
+  def locked_account
+    return if params[:controller] == 'home' && params[:action] == 'index'
+    redirect_to root_url if current_user.locked
+  end
 end
