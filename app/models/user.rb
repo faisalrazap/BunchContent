@@ -38,4 +38,8 @@ class User < ActiveRecord::Base
     return { url: users_path, message: 'User does not exist' } if user.blank?
     return { url: root_url, message: 'You are not Authorized' } unless super_admin? || user.creator == self
   end
+
+  def non_active
+    active == false
+  end
 end
