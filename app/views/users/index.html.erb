@@ -20,7 +20,7 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
-        <td><%= user.role %></td>
+        <td><%= user.role.try(:titleize) %></td>
         <td><%= user.active %></td>
         <td>
           <div class='row text-center'>
