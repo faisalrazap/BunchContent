@@ -17,7 +17,7 @@ $(document).ready ->
         }
         'user[password_confirmation]': {
           minlength : 8
-          equalTo : "#user_password"
+          equalTo : '#user_password'
         }
         'user[role]': {
           role_selected: true
