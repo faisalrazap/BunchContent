@@ -11,12 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202200539) do
+ActiveRecord::Schema.define(version: 20151206095237) do
+
+  create_table "response_dates", force: :cascade do |t|
+    t.integer  "dateable_id",    limit: 4
+    t.string   "dateable_type",  limit: 255
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "share_count",    limit: 4,   default: 0
+    t.integer  "response_count", limit: 4,   default: 0
+    t.datetime "date"
+  end
+
+  add_index "response_dates", ["dateable_type", "dateable_id"], name: "index_response_dates_on_dateable_type_and_dateable_id", using: :btree
 
   create_table "static_tools", force: :cascade do |t|
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.string   "page_key",   limit: 30
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.string   "page_key",       limit: 30
+    t.integer  "response_count", limit: 4,  default: 0
   end
 
   add_index "static_tools", ["page_key"], name: "index_static_tools_on_page_key", using: :btree
@@ -39,9 +52,11 @@ ActiveRecord::Schema.define(version: 20151202200539) do
     t.boolean  "active",                 limit: 1,   default: true
     t.boolean  "locked",                 limit: 1,   default: false
     t.string   "role",                   limit: 30
+    t.integer  "creator_id",             limit: 4
   end
 
   add_index "users", ["active"], name: "index_users_on_active", using: :btree
+  add_index "users", ["creator_id"], name: "index_users_on_creator_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["locked"], name: "index_users_on_locked", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

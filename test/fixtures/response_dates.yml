@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 
+  share_count: 
+  response_count: 
+  dateable_id: 
+  dateable_type: Dateable
+
+two:
+  date: 
+  share_count: 
+  response_count: 
+  dateable_id: 
+  dateable_type: Dateable

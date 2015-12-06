@@ -8,6 +8,7 @@ class StaticToolsController < ApplicationController
 
   def quiz_result
     @result = @static_tool.calculate_result(params, @static_data)
+    @static_tool.record_response
 
     respond_to do |format|
       format.js

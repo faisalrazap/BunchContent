@@ -1,5 +1,7 @@
 class StaticTool < ActiveRecord::Base
 
+  has_many :response_dates, as: :dateable, dependent: :destroy
+
   def self.find_tool(params)
     return StaticTool.find_by_id(params[:id]) if params[:id].present?
     StaticTool.find_by_page_key(params[:action])
@@ -28,6 +30,16 @@ class StaticTool < ActiveRecord::Base
 
     selected_player = players.max_by{ |player, score| score }
     { page_key: tool_data['page_key'] }.merge(tool_data['result'][selected_player.first])
+  end
+
+  def record_response
+    response = self.response_dates.find_or_initialize_by(date: Date.today)
+
+    self.with_lock do
+      self.increment!(:response_count)
+      response.lock!
+      response.increment!(:response_count)
+    end
   end
 
 end
