@@ -1,0 +1,19 @@
+<div class='<%= "ques_#{ques_number} #{display_class(ques_number)}" %>'>
+  <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2'>
+    <strong><%= "Question #{ques_number} of 5" %></strong>
+    <h2><%= question['title'] %></h2>
+  </div>
+  <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2'>
+    <div class='describe-img'><%= image_tag(question['image']) %></div>
+  </div>
+  <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-centered'>
+    <ul class='static-quiz-checkbox'>
+      <% @static_data['answers'][ques_number].each do |number, answer| %>
+        <li class='answer-option' id=<%= "question_#{question['position']}_#{number}" %>>
+          <%= check_box_tag "answer-#{ques_number}", number, false, class: "ques_#{ques_number} css-checkbox" %>
+          <%= label_tag "answer-#{ques_number}", answer['title'], class: 'css-label' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
