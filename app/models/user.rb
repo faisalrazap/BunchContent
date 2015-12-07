@@ -10,16 +10,16 @@ class User < ActiveRecord::Base
 
   validates_presence_of :role
 
-  Role = Struct.new(:display_name, :value_name)
+  Role = Struct.new(:role_name, :role_value)
   ROLES = {
-    'super_admin'       => ['super_admin', 'super_group_admin', 'group_admin', 'admin'],
-    'super_group_admin' => ['super_group_admin', 'group_admin', 'admin'],
-    'group_admin'       => ['group_admin', 'admin'],
-    'admin'             => ['admin'],
+    super_admin:        ['super_admin', 'super_group_admin', 'group_admin', 'admin'],
+    super_group_admin:  ['super_group_admin', 'group_admin', 'admin'],
+    group_admin:        ['group_admin', 'admin'],
+    admin:              ['admin'],
   }
 
-  def available_roles
-    ROLES[self.role].map { |role| Role.new(role.titleize, role) }
+  def sub_roles
+    ROLES[self.role.to_sym].map { |role| Role.new(role.titleize, role) }
   end
 
   def sub_users
@@ -36,10 +36,14 @@ class User < ActiveRecord::Base
 
   def validate(user)
     return { url: users_path, message: 'User does not exist' } if user.blank?
-    return { url: root_url, message: 'You are not Authorized' } unless super_admin? || user.creator == self
+    return { url: root_url, message: 'You are not Authorized to do this action' } unless super_admin? || user.creator == self
   end
 
-  def non_active
-    active == false
+  def inactive?
+    not active
+  end
+
+  def locked?
+    locked
   end
 end

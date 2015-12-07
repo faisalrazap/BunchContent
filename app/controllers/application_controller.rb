@@ -4,12 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :authenticate_user!
-  before_action :locked_account
+  before_action :check_locked_account
   before_action :is_user_active
 
   private
 
-  def locked_account
+  def check_locked_account
     if current_user
       return if params[:controller] == 'home' && params[:action] == 'index'
       redirect_to root_url if current_user.locked
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_user_active
-    if current_user && current_user.non_active
+    if current_user && current_user.inactive?
       sign_out(current_user)
       redirect_to root_url
     end

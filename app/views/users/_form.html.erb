@@ -37,7 +37,7 @@
 <div class='form-group'>
   <%= f.label :role, class: 'col-md-3 control-label' %>
   <div class='col-md-3'>
-    <%= f.select :role, options_from_collection_for_select(current_user.available_roles, :value_name, :display_name, f.object.role), { include_blank: 'Select Role' }, required: true, class: 'form-control' %>
+    <%= f.select :role, options_from_collection_for_select(current_user.sub_roles, :role_value, :role_name, f.object.role), { include_blank: 'Select Role' }, required: true, class: 'form-control' %>
   </div>
 </div>
 
