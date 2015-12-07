@@ -2,9 +2,9 @@ class StaticTool < ActiveRecord::Base
 
   has_many :response_dates, as: :dateable, dependent: :destroy
 
-  def self.find_tool(params)
-    return StaticTool.find_by_id(params[:id]) if params[:id].present?
-    StaticTool.find_by_page_key(params[:action])
+  def self.find_tool(id, action)
+    return StaticTool.find_by_id(id) if id.present?
+    StaticTool.find_by_page_key(action)
   end
 
   def calculate_result(params, tool_data)

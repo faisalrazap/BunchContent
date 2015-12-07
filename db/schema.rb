@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206095237) do
+ActiveRecord::Schema.define(version: 20151207185159) do
 
   create_table "response_dates", force: :cascade do |t|
+    t.datetime "date"
+    t.integer  "share_count",    limit: 4,   default: 0
+    t.integer  "response_count", limit: 4,   default: 0
     t.integer  "dateable_id",    limit: 4
     t.string   "dateable_type",  limit: 255
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.integer  "share_count",    limit: 4,   default: 0
-    t.integer  "response_count", limit: 4,   default: 0
-    t.datetime "date"
   end
 
   add_index "response_dates", ["dateable_type", "dateable_id"], name: "index_response_dates_on_dateable_type_and_dateable_id", using: :btree

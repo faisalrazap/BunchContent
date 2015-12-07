@@ -1,7 +1,6 @@
 $(document).ready ->
   if $('.answer-option').length > 0
     $('.answer-option').click (e) ->
-      e.stopPropagation()
       e.preventDefault()
       question_number = parseInt(@id.split('_')[1])
       answer = parseInt(@id.split('_')[2])
@@ -12,15 +11,14 @@ $(document).ready ->
     return
 
 load_next_question = (question_number) ->
-  $('.ques_' + question_number).addClass('hidden')
+  $(".ques_#{question_number}").addClass('hidden')
   next_question = question_number + 1
-  if $('.ques_' + next_question).length > 0
-    $('.ques_' + next_question).fadeIn 1200
+  if $(".ques_#{next_question}").length > 0
+    $(".ques_#{next_question}").fadeIn 1200
   else
     $('#static_quiz_form').submit();
 
 selected_list_answer = (list) ->
   list_checkbox = $(list).find('input[type=checkbox]')
   if list_checkbox.length > 0
-    list_checkbox[0].setAttribute 'checked', 'checked'
     list_checkbox[0].checked = true

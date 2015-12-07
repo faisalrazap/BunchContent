@@ -18,7 +18,7 @@ class StaticToolsController < ApplicationController
   private
 
   def set_static_tool
-    @static_tool = StaticTool.find_tool(params)
+    @static_tool = StaticTool.find_tool(params[:id], params[:action])
     redirect_to root_url, alert: 'This is an invalid Url' if @static_tool.blank?
   end
 

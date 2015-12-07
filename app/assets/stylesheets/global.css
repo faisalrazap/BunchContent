@@ -95,6 +95,7 @@
 }
 .static-quiz-content {
   text-align: center;
+  margin-bottom: 40px;
 }
 .static-quiz-checkbox {
   text-align: left;
@@ -154,7 +155,7 @@ ul.static-quiz-checkbox input[type=checkbox].css-checkbox:checked + label.css-la
   background-position: 0 -20px;
 }
 ul.static-quiz-checkbox label.css-label {
-  background-image: url("check-box2.png");
+  background-image: url('check-box2.png');
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

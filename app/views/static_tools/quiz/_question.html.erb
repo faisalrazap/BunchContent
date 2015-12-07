@@ -1,6 +1,6 @@
 <div class='<%= "ques_#{ques_number} #{display_class(ques_number)}" %>'>
   <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2'>
-    <strong><%= "Question #{ques_number} of 5" %></strong>
+    <strong><%= "Question #{ques_number} of #{@static_data['total_questions']}" %></strong>
     <h2><%= question['title'] %></h2>
   </div>
   <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2'>
