@@ -309,7 +309,7 @@ result:
   hafeez:
     image: 'hafeez.jpg'
     name: 'Muhammad Hafeez'
-    description: 'Muhammad Hafeez, he is the gentleman with an eye of expert in his own way. He is very responsible player. You are flexible abd calm like him.'
+    description: 'Muhammad Hafeez, he is the gentleman with an eye of expert in his own way. He is very responsible player. You are flexible and calm like him.'
   shoaib_akhtar:
     image: 'shoaib.jpg'
     name: 'Shoaib Akhtar'
