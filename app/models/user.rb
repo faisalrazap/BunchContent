@@ -42,8 +42,4 @@ class User < ActiveRecord::Base
   def inactive?
     not active
   end
-
-  def locked?
-    locked
-  end
 end
