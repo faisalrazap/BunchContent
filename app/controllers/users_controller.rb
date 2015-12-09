@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
 
+  before_action :restrict_admin
   before_action :set_user, only: [:edit, :update, :destroy]
   before_action :skip_password_fields, only: [:update]
 
   def index
-    @users = User.all
+    @users = current_user.sub_users
   end
 
   def new
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
 
   def create_user
     @user = User.new(user_params)
+    @user.creator = current_user
 
     respond_to do |format|
       if @user.save
@@ -51,7 +53,8 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find_by_id(params[:id])
-    redirect_to users_path, alert: 'User does not exist' if @user.blank?
+    data = current_user.validate(@user)
+    redirect_to data[:url], alert: data[:message] if data.present?
   end
 
   def skip_password_fields
@@ -59,6 +62,10 @@ class UsersController < ApplicationController
       params[:user].delete(:password)
       params[:user].delete(:password_confirmation)
     end
+  end
+
+  def restrict_admin
+    redirect_to root_url, alert: 'You are not Authorized to do this action.' if current_user.admin?
   end
 
 end
