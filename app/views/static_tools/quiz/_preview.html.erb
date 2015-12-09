@@ -1,0 +1,13 @@
+<div class='static-quiz-content'>
+  <div class='static-quiz-title'>
+    <h1><%= @static_data['pak_player']['title'] %></h1>
+  </div>
+  <div id='questions-container'>
+    <%= form_tag(quiz_result_static_tool_path(@static_tool), method: :post, remote: true, id: :static_quiz_form) do %>
+      <% @static_data['questions'].each do |question_number, question| %>
+        <%= render partial: 'static_tools/quiz/question', locals: { ques_number: question_number, question: question } %>
+        <div class='clearfix'></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

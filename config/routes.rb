@@ -6,12 +6,19 @@ Rails.application.routes.draw do
       post :create_user, as: :create
     end
   end
+
+  resources :static_tools do
+    member do
+      post :quiz_result
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get '/which-pakistani-cricket-player-are-you' => 'static_tools#pak_player', as: :pak_player
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

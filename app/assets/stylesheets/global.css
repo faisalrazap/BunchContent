@@ -93,3 +93,85 @@
 .navbar {
   z-index: 1003;
 }
+.static-quiz-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.static-quiz-checkbox {
+  text-align: left;
+}
+.static-quiz-title {
+  margin-bottom: 40px;
+}
+.answer-option {
+  list-style: none;
+}
+ul.static-quiz-checkbox {
+  padding: 50px 0px 0px 0px;
+  float: left;
+  width: 100%;
+}
+ul.static-quiz-checkbox li {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+ul.static-quiz-checkbox li:hover {
+  background: #f5f5f5;
+  padding-bottom: 8px;
+}
+ul.static-quiz-checkbox li label {
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+ul.static-quiz-checkbox input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+ul.static-quiz-checkbox input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 34px;
+  height: 21px;
+  display: inline-block;
+  line-height: 22px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 300;
+}
+ul.static-quiz-checkbox input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -20px;
+}
+ul.static-quiz-checkbox label.css-label {
+  background-image: url('check-box2.png');
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+}
+.hide-question {
+  display: none;
+}
+.describe-img img{
+  width: 100%;
+}
+.pak-player-result-desc {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}

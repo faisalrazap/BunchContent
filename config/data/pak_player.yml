@@ -1,0 +1,330 @@
+page_key: 'pak_player'
+
+pak_player:
+  title: 'Which Pakistani Cricket Player are you?'
+
+total_questions: 5
+
+questions:
+  1:
+    title: 'What kind of personality you have?'
+    image: 'pak-team.jpg'
+    position: 1
+  2:
+    title: 'How is your batting style?'
+    image: 'pak-team.jpg'
+    position: 2
+  3:
+    title: 'How is your bowling style?'
+    image: 'pak-team.jpg'
+    position: 3
+  4:
+    title: 'How is your attitude towards your fans?'
+    image: 'pak-team.jpg'
+    position: 4
+  5:
+    title: 'Do you have good average?'
+    image: 'pak-team.jpg'
+    position: 5
+
+answers:
+  1:
+    1:
+      title: 'Friendly'
+      shahid_afridi: 70
+      abdur_Razzak: 85
+      muhammad_aamir: 80
+      misbah: 95
+      umer_akmal: 75
+      hafeez: 89
+      shoaib_akhtar: 67
+      sarfraz: 98
+    2:
+      title: 'Sweet'
+      shahid_afridi: 75
+      abdur_Razzak: 94
+      muhammad_aamir: 68
+      misbah: 96
+      umer_akmal: 75
+      hafeez: 91
+      shoaib_akhtar: 65
+      sarfraz: 70
+    3:
+      title: 'Loving'
+      shahid_afridi: 85
+      abdur_Razzak: 93
+      muhammad_aamir: 75
+      misbah: 90
+      umer_akmal: 65
+      hafeez: 86
+      shoaib_akhtar: 45
+      sarfraz: 85
+    4:
+      title: 'Attractive'
+      shahid_afridi: 100
+      abdur_Razzak: 85
+      muhammad_aamir: 75
+      misbah: 60
+      umer_akmal: 65
+      hafeez: 85
+      shoaib_akhtar: 72
+      sarfraz: 59
+    5:
+      title: 'Different from everybody'
+      shahid_afridi: 65
+      abdur_Razzak: 85
+      muhammad_aamir: 95
+      misbah: 75
+      umer_akmal: 65
+      hafeez: 78
+      shoaib_akhtar: 100
+      sarfraz: 100
+  2:
+    1:
+      title: 'Aggressive'
+      shahid_afridi: 100
+      abdur_Razzak: 95
+      muhammad_aamir: 45
+      misbah: 75
+      umer_akmal: 93
+      hafeez: 86
+      shoaib_akhtar: 55
+      sarfraz: 64
+    2:
+      title: 'Great'
+      shahid_afridi: 75
+      abdur_Razzak: 93
+      muhammad_aamir: 45
+      misbah: 100
+      umer_akmal: 85
+      hafeez: 90
+      shoaib_akhtar: 55
+      sarfraz: 75
+    3:
+      title: 'Everybody loves my batting style'
+      shahid_afridi: 100
+      abdur_Razzak: 105
+      muhammad_aamir: 40
+      misbah: 65
+      umer_akmal: 95
+      hafeez: 82
+      shoaib_akhtar: 54
+      sarfraz: 76
+    4:
+      title: 'So so..'
+      shahid_afridi: 45
+      abdur_Razzak: 57
+      muhammad_aamir: 88
+      misbah: 66
+      umer_akmal: 55
+      hafeez: 68
+      shoaib_akhtar: 78
+      sarfraz: 75
+    5:
+      title: 'I always give 100%'
+      shahid_afridi: 58
+      abdur_Razzak: 95
+      muhammad_aamir: 45
+      misbah: 105
+      umer_akmal: 88
+      hafeez: 85
+      shoaib_akhtar: 44
+      sarfraz: 75
+  3:
+    1:
+      title: 'I am best spinner'
+      shahid_afridi: 76
+      abdur_Razzak: 0
+      muhammad_aamir: 0
+      misbah: 0
+      umer_akmal: 0
+      hafeez: 95
+      shoaib_akhtar: 0
+      sarfraz: 0
+    2:
+      title: 'I am the fastest bowler in world'
+      shahid_afridi: 35
+      abdur_Razzak: 59
+      muhammad_aamir: 76
+      misbah: 1
+      umer_akmal: 1
+      hafeez: 20
+      shoaib_akhtar: 95
+      sarfraz: 1
+    3:
+      title: 'Agressive'
+      shahid_afridi: 87
+      abdur_Razzak: 75
+      muhammad_aamir: 89
+      misbah: 0
+      umer_akmal: 0
+      hafeez: 69
+      shoaib_akhtar: 98
+      sarfraz: 0
+    4:
+      title: 'I am the wicket taker'
+      shahid_afridi: 84
+      abdur_Razzak: 72
+      muhammad_aamir: 97
+      misbah: 0
+      umer_akmal: 0
+      hafeez: 75
+      shoaib_akhtar: 69
+      sarfraz: 0
+    5:
+      title: 'I dont like bowling'
+      shahid_afridi: 39
+      abdur_Razzak: 25
+      muhammad_aamir: 0
+      misbah: 89
+      umer_akmal: 96
+      hafeez: 19
+      shoaib_akhtar: 0
+      sarfraz: 99
+  4:
+    1:
+      title: 'I love to meet them'
+      shahid_afridi: 85
+      abdur_Razzak: 64
+      muhammad_aamir: 72
+      misbah: 79
+      umer_akmal: 98
+      hafeez: 86
+      shoaib_akhtar: 105
+      sarfraz: 66
+    2:
+      title: 'I am very humble with them'
+      shahid_afridi: 75
+      abdur_Razzak: 89
+      muhammad_aamir: 65
+      misbah: 99
+      umer_akmal: 66
+      hafeez: 85
+      shoaib_akhtar: 53
+      sarfraz: 78
+    3:
+      title: 'I try to avoid them'
+      shahid_afridi: 45
+      abdur_Razzak: 33
+      muhammad_aamir: 68
+      misbah: 25
+      umer_akmal: 22
+      hafeez: 28
+      shoaib_akhtar: 18
+      sarfraz: 59
+    4:
+      title: 'I am just ok'
+      shahid_afridi: 57
+      abdur_Razzak: 88
+      muhammad_aamir: 73
+      misbah: 43
+      umer_akmal: 99
+      hafeez: 69
+      shoaib_akhtar: 66
+      sarfraz: 99
+    5:
+      title: 'I dont like fans'
+      shahid_afridi: 39
+      abdur_Razzak: 26
+      muhammad_aamir: 15
+      misbah: 0
+      umer_akmal: 49
+      hafeez: 45
+      shoaib_akhtar: 55
+      sarfraz: 10
+  5:
+    1:
+      title: 'I hold world rank in cricket'
+      shahid_afridi: 88
+      abdur_Razzak: 62
+      muhammad_aamir: 30
+      misbah: 55
+      umer_akmal: 44
+      hafeez: 59
+      shoaib_akhtar: 89
+      sarfraz: 45
+    2:
+      title: 'Of course i do'
+      shahid_afridi: 57
+      abdur_Razzak: 79
+      muhammad_aamir: 66
+      misbah: 99
+      umer_akmal: 60
+      hafeez: 88
+      shoaib_akhtar: 43
+      sarfraz: 79
+    3:
+      title: 'I am awesome'
+      shahid_afridi: 69
+      abdur_Razzak: 99
+      muhammad_aamir: 75
+      misbah: 89
+      umer_akmal: 74
+      hafeez: 77
+      shoaib_akhtar: 69
+      sarfraz: 79
+    4:
+      title: 'I am youngest with great avg'
+      shahid_afridi: 67
+      abdur_Razzak: 68
+      muhammad_aamir: 79
+      misbah: 69
+      umer_akmal: 79
+      hafeez: 89
+      shoaib_akhtar: 55
+      sarfraz: 88
+    5:
+      title: 'What kind of question is it?'
+      shahid_afridi: 29
+      abdur_Razzak: 46
+      muhammad_aamir: 55
+      misbah: 49
+      umer_akmal: 74
+      hafeez: 67
+      shoaib_akhtar: 88
+      sarfraz: 56
+
+
+result:
+  shahid_afridi:
+    image: 'afridi.jpg'
+    name: 'Shahid Khan Afridi'
+    description: 'Shahid Afridi, the most aggressive and loved player. You are Awesome like him.'
+  abdur_Razzak:
+    image: 'razzak.jpg'
+    name: 'Abdur Razzak'
+    description: 'Abdur Razzak, the most calm yet thunder bolt for bowlers. He can perform under great pressure like you.'
+  muhammad_aamir:
+    image: 'aamir.jpg'
+    name: 'Muhammad Aamir'
+    description: 'Muhammad Aamir a young lad. He is the incredible bowler at very young age he aquired amazing skills. You are a young talented person.'
+  misbah:
+    image: 'misbah.jpg'
+    name: 'Misbah-ul-Haq'
+    description: 'Misbah, the great leader and calm as mountains. You got very rare quality of calmness.'
+  umer_akmal:
+    image: 'umer_akmal.jpg'
+    name: 'Umer Akmal'
+    description: 'Umer Akmal, the hitting machine. He got great style of batting and a bit impatient. You are hurricane like him.'
+  hafeez:
+    image: 'hafeez.jpg'
+    name: 'Muhammad Hafeez'
+    description: 'Muhammad Hafeez, he is the gentleman with an eye of expert in his own way. He is very responsible player. You are flexible and calm like him.'
+  shoaib_akhtar:
+    image: 'shoaib.jpg'
+    name: 'Shoaib Akhtar'
+    description: 'Shoaib Akhtar, he held the title for the fastest bowler in the world. He often adopt aggressive style. You are awesome and of attacking nature.'
+  sarfraz:
+    image: 'sarfraz.jpg'
+    name: 'Sarfraz Ahmad'
+    description: 'Sarfraz, this young man is awesome wicket keeper and can bat well. You have qualities of adapting the situation and perform well like him'
+
+players:
+  shahid_afridi: 0
+  abdur_Razzak: 0
+  muhammad_aamir: 0
+  misbah: 0
+  umer_akmal: 0
+  hafeez: 0
+  shoaib_akhtar: 0
+  sarfraz: 0
