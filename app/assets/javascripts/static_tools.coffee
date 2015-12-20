@@ -12,6 +12,7 @@ $(document).ready ->
 
 load_next_question = (question_number) ->
   $(".ques_#{question_number}").addClass('hidden')
+  $('.static-quiz-content').animate({ scrollTop: 0 }, 400);
   next_question = question_number + 1
   if $(".ques_#{next_question}").length > 0
     $(".ques_#{next_question}").fadeIn 1200
