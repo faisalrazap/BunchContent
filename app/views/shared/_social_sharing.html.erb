@@ -27,8 +27,21 @@
         display: 'popup'
       }, function(response) {
         if (response && response.post_id) {
+          increment_share_count();
         }
       });
     });
+
+    $(".btn-twitter").click(function(){
+      increment_share_count();
+    });
+
+    var increment_share_count = function() {
+      $.ajax({
+        url: '<%= polymorphic_path([:update_share_count, @static_tool]) %>',
+        type: 'post',
+        cache: false,
+      });
+    };
   });
 </script>

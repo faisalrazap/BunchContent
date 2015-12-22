@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207185159) do
+ActiveRecord::Schema.define(version: 20151222171138) do
 
   create_table "response_dates", force: :cascade do |t|
     t.datetime "date"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20151207185159) do
     t.datetime "updated_at",                            null: false
     t.string   "page_key",       limit: 30
     t.integer  "response_count", limit: 4,  default: 0
+    t.integer  "share_count",    limit: 4,  default: 0
   end
 
   add_index "static_tools", ["page_key"], name: "index_static_tools_on_page_key", using: :btree

@@ -42,4 +42,14 @@ class StaticTool < ActiveRecord::Base
     end
   end
 
+  def update_share_data
+    response = self.response_dates.find_or_initialize_by(date: Date.today)
+
+    self.with_lock do
+      self.increment!(:share_count)
+      response.lock!
+      response.increment!(:share_count)
+    end
+  end
+
 end

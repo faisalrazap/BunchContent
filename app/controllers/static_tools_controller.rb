@@ -1,6 +1,6 @@
 class StaticToolsController < ApplicationController
 
-  before_action :set_static_tool, only: [:pak_player, :quiz_result]
+  before_action :set_static_tool, only: [:pak_player, :quiz_result, :update_share_count]
   before_action :static_tool_data, only: [:pak_player, :quiz_result]
 
   def pak_player
@@ -12,6 +12,14 @@ class StaticToolsController < ApplicationController
 
     respond_to do |format|
       format.js
+    end
+  end
+
+  def update_share_count
+    @static_tool.update_share_data
+
+    respond_to do |format|
+      format.json { render json: :ok }
     end
   end
 
