@@ -291,36 +291,44 @@ result:
     image: 'afridi.jpg'
     name: 'Shahid Khan Afridi'
     description: 'Shahid Afridi, the most aggressive and loved player. You are Awesome like him.'
+    facebook_share_desc: 'I am Shahid Afridi'
   abdur_Razzak:
     image: 'razzak.jpg'
     name: 'Abdur Razzak'
     description: 'Abdur Razzak, the most calm yet thunder bolt for bowlers. He can perform under great pressure like you.'
+    facebook_share_desc: 'I am Abdur Razzak'
   muhammad_aamir:
     image: 'aamir.jpg'
     name: 'Muhammad Aamir'
     description: 'Muhammad Aamir a young lad. He is the incredible bowler at very young age he aquired amazing skills. You are a young talented person.'
+    facebook_share_desc: 'I am Muhammad Amir'
   misbah:
     image: 'misbah.jpg'
     name: 'Misbah-ul-Haq'
     description: 'Misbah, the great leader and calm as mountains. You got very rare quality of calmness.'
+    facebook_share_desc: 'I am Misbah-ul-Haq'
   umer_akmal:
     image: 'umer_akmal.jpg'
     name: 'Umer Akmal'
     description: 'Umer Akmal, the hitting machine. He got great style of batting and a bit impatient. You are hurricane like him.'
+    facebook_share_desc: 'I am Umer Akmal'
   hafeez:
     image: 'hafeez.jpg'
     name: 'Muhammad Hafeez'
     description: 'Muhammad Hafeez, he is the gentleman with an eye of expert in his own way. He is very responsible player. You are flexible and calm like him.'
+    facebook_share_desc: 'I am Muhammad Hafeez'
   shoaib_akhtar:
     image: 'shoaib.jpg'
     name: 'Shoaib Akhtar'
     description: 'Shoaib Akhtar, he held the title for the fastest bowler in the world. He often adopt aggressive style. You are awesome and of attacking nature.'
+    facebook_share_desc: 'I am Shoaib Akhtar'
   sarfraz:
     image: 'sarfraz.jpg'
     name: 'Sarfraz Ahmad'
     description: 'Sarfraz, this young man is awesome wicket keeper and can bat well. You have qualities of adapting the situation and perform well like him'
+    facebook_share_desc: 'I am Sarfraz Ahmad'
 
-players:
+options:
   shahid_afridi: 0
   abdur_Razzak: 0
   muhammad_aamir: 0

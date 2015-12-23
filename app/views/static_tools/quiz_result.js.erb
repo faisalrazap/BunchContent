@@ -1,1 +1,1 @@
-$('#questions-container').html('<%= raw escape_javascript(render partial: "static_tools/results/#{@result[:page_key]}", locals: { result: @result, image: @static_data["main_image"] }) %>')
+$('#questions-container').html('<%= raw escape_javascript(render partial: "static_tools/results/#{@result[:page_key]}", locals: { result: @result }) %>')
