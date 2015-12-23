@@ -16,7 +16,7 @@ class StaticToolsController < ApplicationController
   end
 
   def update_share_count
-    @static_tool.update_share_data
+    @static_tool.update_share_count
 
     respond_to do |format|
       format.json { render json: :ok }
