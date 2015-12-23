@@ -1,7 +1,7 @@
 <%= render 'shared/social_share_api' %>
 <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-md-offset-2'>
-  <%= render partial: 'shared/meta_tags', locals: { name: 'Which Pakistani cricketer you are?', description: 'Try it out to find which cricketer you can be.', url: pak_player_path } %>
-  <%= render partial: 'shared/social_sharing', locals: { url: pak_player_path, name: 'Which Pakistani cricketer you are?', photo_url: image_url(image), description: 'Try it out to find which cricketer you can be.', twitter_text: 'Which Pakistani cricketer you are?' } %>
+  <%= render partial: 'shared/meta_tags', locals: { name: 'Which Pakistani cricketer are you?', description: result['facebook_share_desc'], url: pak_player_path } %>
+  <%= render partial: 'shared/social_sharing', locals: { url: pak_player_path, name: 'Which Pakistani cricketer you are?', photo_url: image_url(result['image']), description: result['facebook_share_desc'], twitter_text: "#{result['facebook_share_desc']}. Which Pakistani cricketer are you?" } %>
   <h2>You are <strong><%= result['name'] %></stromg></h2>
 </div>
 <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 col-md-offset-3'>
