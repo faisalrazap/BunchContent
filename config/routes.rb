@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :static_tools do
     member do
       post :quiz_result
+      post :update_share_count
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

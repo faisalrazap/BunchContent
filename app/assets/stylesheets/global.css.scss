@@ -155,7 +155,7 @@ ul.static-quiz-checkbox input[type=checkbox].css-checkbox:checked + label.css-la
   background-position: 0 -20px;
 }
 ul.static-quiz-checkbox label.css-label {
-  background-image: url('check-box2.png');
+  background-image: image-url('check-box2.png');
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -174,4 +174,52 @@ ul.static-quiz-checkbox label.css-label {
   font-size: 22px;
   font-weight: bold;
   margin-top: 20px;
+}
+.result-social-wrap {
+  float: left;
+  width: 100%;
+  padding: 25px 0px;
+}
+.btn-facebook {
+  color: #ffffff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+  cursor: pointer;
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active {
+  color: #ffffff;
+  background-color: #2f4779;
+  border-color: #2f4779;
+}
+.btn-facebook:active,
+.btn-facebook.active {
+  background-image: none;
+}
+.btn-twitter {
+  color: #ffffff;
+  background-color: #00c3f3;
+  border-color: #00c3f3;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active {
+  color: #ffffff;
+  background-color: #00a6cf;
+  border-color: #00a6cf;
+}
+.btn-twitter:active,
+.btn-twitter.active {
+  background-image: none;
+}
+.custom-button {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 0px;
+  border: 0px;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
