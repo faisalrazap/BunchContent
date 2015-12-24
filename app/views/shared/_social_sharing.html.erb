@@ -5,7 +5,7 @@
     </span>
   </div>
   <div class='col-xs-6 col-sm-6 col-md-6'>
-    <a href="https://twitter.com/share?text=#{ URI::encode(twitter_text) }&url=#{ url.gsub('https://', 'http://') }" target='_blank'>
+    <a href=<%= "https://twitter.com/share?text=#{ URI::encode(twitter_text) }&url=#{ url }" %> target='_blank'>
       <span class='btn btn-xlarge btn-twitter custom-button pull-left'>
         Share on <i class='fa fa-twitter'></i>
       </span>
