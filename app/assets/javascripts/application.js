@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require colorbox-rails
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require turbolinks

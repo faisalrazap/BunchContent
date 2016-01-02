@@ -49,6 +49,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    colorbox-rails (0.1.2)
+      jquery-rails
+      rails (>= 3.1.1)
     commonjs (0.2.7)
     debug_inspector (0.0.2)
     devise (3.5.2)
@@ -179,6 +182,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  colorbox-rails (= 0.1.2)
   devise
   jbuilder (~> 2.0)
   jquery-rails
